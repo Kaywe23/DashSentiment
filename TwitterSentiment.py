@@ -8,6 +8,10 @@ import re
 import LokalesMLTraining
 import sqlite3
 import time
+import os
+import sys
+sys.path.insert(0, os.path.realpath(os.path.dirname(__file__)))
+os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
 #connect to database
 connection = sqlite3.connect('twitter.db')
