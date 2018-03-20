@@ -10,7 +10,7 @@ lemmatizer = WordNetLemmatizer()
 
 def konvertiere(infile,outfile):
 	out = open(outfile,'a')
-	with open(infile, buffering=200000, encoding='latin-1') as f:
+	with io.open(infile, buffering=200000, encoding='latin-1') as f:
 		try:
 			for zeile in f:
 				zeile = zeile.replace('"','')
