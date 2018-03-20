@@ -30,16 +30,16 @@ hidden_nodes_2 = int(hidden_nodes_1 * 0.5)
 beta=0.001
 n_classes = 2
 batch_size = 100
-hm_epochs = 10
-batch_count = 100000
+hm_epochs = 1
+batch_count = 100
 display_step = 1
 logs_path = './tmp/Test.py/' + datetime.now().isoformat()
-csv_file='/home/kevin/ml-evaluation (lokal)/train_converted_vermischt.csv'
-csv_file2='/home/kevin/ml-evaluation (lokal)/vector_test_converted.csv'
-checkpoint='/home/kevin/ml-evaluation (lokal)/model_DashApp.ckpt'
+csv_file='train_converted_vermischt.csv'
+csv_file2='vector_test_converted.csv'
+checkpoint='DashSentiment/model_DashApp.ckpt'
 
 
-with open('/home/kevin/ml-evaluation (lokal)/lexikon2.pickle', mode='rb') as p:
+with open('DashSentiment/lexikon2.pickle', mode='rb') as p:
     lexikon = pickle.load(p)
 
 
@@ -246,7 +246,7 @@ def trainDNN():
 
             print 'Test Accuracy:',accuracy.eval({tf_train_dataset: test_datasets, tf_train_labels: test_labels, keep_prob:1.0})
 
-#trainDNN()
+trainDNN()
 
 def useDNN(input_data):
 
