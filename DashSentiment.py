@@ -207,4 +207,4 @@ for js in external_js:
     app.scripts.append_script({'external_url': js})
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run_server(debug=True, host='0.0.0.0')
