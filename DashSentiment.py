@@ -17,7 +17,7 @@ os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
 connection = sqlite3.connect('twitter.db',  check_same_thread=False)
 
-server = flask.Flask(__name__)
+server = Flask(__name__)
 app = dash.Dash(__name__, server=server)
 
 
