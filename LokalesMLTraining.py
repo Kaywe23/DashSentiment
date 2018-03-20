@@ -34,12 +34,12 @@ hm_epochs = 1
 batch_count = 100
 display_step = 1
 logs_path = './tmp/Test.py/' + datetime.now().isoformat()
-csv_file='train_converted_vermischt.csv'
-csv_file2='vector_test_converted.csv'
-checkpoint='DashSentiment/model_DashApp.ckpt'
+csv_file='/home/user/train_converted_vermischt.csv'
+csv_file2='/home/user/vector_test_converted.csv'
+checkpoint='model_DashApp.ckpt'
 
 
-with open('DashSentiment/lexikon2.pickle', mode='rb') as p:
+with open('lexikon2.pickle', mode='rb') as p:
     lexikon = pickle.load(p)
 
 
