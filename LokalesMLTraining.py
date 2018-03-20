@@ -246,7 +246,7 @@ def trainDNN():
 
             print 'Test Accuracy:',accuracy.eval({tf_train_dataset: test_datasets, tf_train_labels: test_labels, keep_prob:1.0})
 
-trainDNN()
+#trainDNN()
 
 def useDNN(input_data):
 

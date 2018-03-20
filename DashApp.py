@@ -14,6 +14,7 @@ import pandas as pd
 connection = sqlite3.connect('twitter.db',  check_same_thread=False)
 
 app = dash.Dash(__name__)
+server = app.server
 
 #NovaTec Image
 app.layout = html.Div([
