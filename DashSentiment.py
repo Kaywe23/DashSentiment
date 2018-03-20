@@ -7,14 +7,13 @@ import plotly
 import random
 import plotly.graph_objs as go
 import plotly.figure_factory as ff
-
+import TwitterSentiment
 import sqlite3
 import pandas as pd
 
 connection = sqlite3.connect('twitter.db',  check_same_thread=False)
 
 app = dash.Dash(__name__)
-server = app.server
 
 #NovaTec Image
 app.layout = html.Div([
@@ -201,5 +200,5 @@ external_js = ['https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/ma
 for js in external_js:
     app.scripts.append_script({'external_url': js})
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+server = app.server
+dev_server = app.run_server
