@@ -11,7 +11,7 @@ import sqlite3
 import pandas as pd
 import os
 import sys
-import Flask
+from flask import Flask
 sys.path.insert(0, os.path.realpath(os.path.dirname(__file__)))
 os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
