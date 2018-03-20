@@ -69,7 +69,7 @@ class listener(StreamListener):
             if tweet is not None:
                 sentiment = LokalesMLTraining.useDNN(tweet)
                 time_ms = data['timestamp_ms']
-                print time_ms, tweet, sentiment
+                #print time_ms, tweet, sentiment
                 c.execute("INSERT INTO sentiment (unix, tweet, sentiment) VALUES (?, ?, ?)",
                          (time_ms, tweet, sentiment))
                 c.execute(
