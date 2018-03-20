@@ -5,7 +5,9 @@ import pickle
 import numpy as np
 import pandas as pd
 import io
-
+import sys
+reload(sys)
+sys.setdefaultencoding('latin-1')
 lemmatizer = WordNetLemmatizer()
 
 def konvertiere(infile,outfile):
@@ -53,7 +55,7 @@ def bildeLexikon(infile):
 	with open('lexikon.pickle','wb') as f:
 		pickle.dump(lexikon,f)
 
-bildeLexikon('train_converted.csv')
+#bildeLexikon('train_converted.csv')
 
 
 def bildeVektoren(infile,outfile,lexikonpickle):
@@ -83,7 +85,7 @@ def bildeVektoren(infile,outfile,lexikonpickle):
 
 		print(zaehler)
 
-bildeVektoren('test_converted.csv','vector_test_converted.csv','lexikon.pickle')
+bildeVektoren('test_converted.csv','vector_test_converted.csv','DashSentiment/lexikon.pickle')
 
 
 def datenVermischen(infile):
