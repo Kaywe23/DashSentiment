@@ -7,9 +7,12 @@ import plotly
 import random
 import plotly.graph_objs as go
 import plotly.figure_factory as ff
-import TwitterSentiment
 import sqlite3
 import pandas as pd
+import os
+import sys
+sys.path.insert(0, os.path.realpath(os.path.dirname(__file__)))
+os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
 connection = sqlite3.connect('twitter.db',  check_same_thread=False)
 
