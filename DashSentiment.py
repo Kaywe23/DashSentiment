@@ -11,12 +11,15 @@ import sqlite3
 import pandas as pd
 import os
 import sys
+import Flask
 sys.path.insert(0, os.path.realpath(os.path.dirname(__file__)))
 os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
 connection = sqlite3.connect('twitter.db',  check_same_thread=False)
 
-app = dash.Dash(__name__)
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, server=server)
+
 
 #NovaTec Image
 app.layout = html.Div([
@@ -203,5 +206,5 @@ external_js = ['https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/ma
 for js in external_js:
     app.scripts.append_script({'external_url': js})
 
-server = app.server
-dev_server = app.run_server
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
