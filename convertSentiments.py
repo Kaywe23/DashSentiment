@@ -85,7 +85,7 @@ def bildeVektoren(infile,outfile,lexikonpickle):
 
 		print(zaehler)
 
-bildeVektoren('test_converted.csv','vector_test_converted.csv','DashSentiment/lexikon.pickle')
+bildeVektoren('test_converted.csv','vector_test_converted.csv','DashSentiment/lexikon2.pickle')
 
 
 def datenVermischen(infile):
